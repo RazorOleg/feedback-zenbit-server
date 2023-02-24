@@ -1,11 +1,11 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import { JwtAuthStrategy } from './jwt.strategy';
-import { JwtAuthService } from './jwt.service';
-import { User } from '../../entities/user.entity';
 import { JwtModule } from '@nestjs/jwt';
-import { AuthService } from '../auth.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import {User} from "../../entities/user.entity";
+import {JwtAuthService} from "./jwt.service";
+import {JwtAuthStrategy} from "./jwt.strategy";
+import {AuthService} from "../auth.service";
 
 @Module({
   imports: [

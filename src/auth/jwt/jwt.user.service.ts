@@ -1,13 +1,11 @@
 import { Injectable, InternalServerErrorException } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
-import { User } from '../../entities/user.entity';
+import {User} from "../../entities/user.entity";
 
 @Injectable()
 export class JwtUserService {
   constructor(private jwtService: JwtService) {}
   public login(payload: any) {
-    console.log('payload', payload);
-
     return this.jwtService.sign({
       email: payload.email,
       password: payload.password,

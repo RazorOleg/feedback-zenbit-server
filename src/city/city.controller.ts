@@ -1,7 +1,8 @@
 import { Controller, Get, UseGuards } from '@nestjs/common';
 import { CityService } from './city.service';
-import { City } from '../entities/city.entity';
-import { OptionalJwtAuthGuard } from '../auth/jwt/jwt.guards';
+import {OptionalJwtAuthGuard} from "../auth/jwt/jwt.guards";
+import {City} from "../entities/city.entity";
+
 
 @Controller('city')
 export class CityController {
